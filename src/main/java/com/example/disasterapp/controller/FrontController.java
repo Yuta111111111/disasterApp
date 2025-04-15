@@ -60,7 +60,6 @@ public class FrontController extends HttpServlet {
 		if (action == null) {
 			action = "/list"; // デフォルトアクション
 		}
-
 		try {
 			Action handler = actionMap.get(action);
 			if (handler != null) {
