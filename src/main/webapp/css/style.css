@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* フォームのエラー表示 */
+.error-message {
+    color: red; /* 文字色を赤に設定 */
+    font-size: 0.8em; /* フォントサイズを小さく設定 (例: 0.8em は元のサイズの 80%) */
+    margin-top: 5px; /* 必要に応じて、上のマージンを追加 */
+}
+
+.buttons {
+    text-align: center; /* テキストやインライン要素を中央揃え */
+    margin-top: 10px; /* 必要に応じて、上のマージンを追加 */
+}
+
+.buttons a {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-left: 10px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.buttons a:hover {
+    background-color: #e0e0e0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+
+    /* 追加したプロパティ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.error {
+	color: red;
+}
