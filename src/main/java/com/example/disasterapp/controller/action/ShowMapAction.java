@@ -13,6 +13,7 @@ public class ShowMapAction implements Action {
 		String latStr = request.getParameter("lat");
 		String lonStr = request.getParameter("lon");
 		String imagePath = request.getParameter("imagePath");
+		String message = request.getParameter("message");
 
 		if (latStr != null && lonStr != null) {
 			try {
@@ -21,6 +22,7 @@ public class ShowMapAction implements Action {
 				request.setAttribute("latitude", lat);
 				request.setAttribute("longitude", lon);
 				request.setAttribute("imagePath", imagePath);
+				request.setAttribute("post.message", message);
 				return "/WEB-INF/views/mapView.jsp";
 			} catch (NumberFormatException e) {
 				request.setAttribute("error", "緯度・経度の形式が無効です。");

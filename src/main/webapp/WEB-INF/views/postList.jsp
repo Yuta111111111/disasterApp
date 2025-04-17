@@ -107,7 +107,7 @@
 
 .post-image {
 	cursor: pointer;
-	max-width: 50%; /* 親要素に合わせて最大幅を設定 */
+	max-width: 30%; /* 親要素に合わせて最大幅を設定 */
 	height: auto;
 	display: block;
 	margin-top: 10px;
@@ -155,7 +155,7 @@
 						<c:choose>
 							<c:when test="${post.latitude != null && post.longitude != null}">
 								<img src="${pageContext.request.contextPath}/${post.imagePath}" alt="投稿画像" class="post-image"
-									onclick="showMap(${post.latitude}, ${post.longitude}, '${pageContext.request.contextPath}/${post.imagePath}')">
+									onclick="showMap(${post.latitude}, ${post.longitude}, '${pageContext.request.contextPath}/${post.imagePath}', '${post.message}')">
 								<span class="post-meta">画像をクリックすると地図を表示します</span>
 							</c:when>
 							<c:otherwise>

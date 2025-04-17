@@ -52,6 +52,7 @@ public class RegisterUserAction implements Action {
                 HttpSession session = request.getSession();
                 session.setAttribute("userId", registeredUser.getId());
                 session.setAttribute("username", registeredUser.getUsername());
+                session.setAttribute("email", registeredUser.getEmail());
 	
 	            // 登録成功メッセージなどを設定してログインページへリダイレクト
 	            request.getSession().setAttribute("successMessage", "登録が完了しました。");

@@ -51,10 +51,12 @@ html, body {
 			var lat = ${latitude};
 			var lon = ${longitude};
 			var imagePath = "${imagePath}"; // サーブレットから渡された画像パスを取得
+			var message = "${post.message}"; // サーブレットから渡されたメッセージを取得
 
 			console.log("mapView.jsp - Latitude: " + lat);
 			console.log("mapView.jsp - Longitude: " + lon);
 			console.log("mapView.jsp - Image Path: " + imagePath);
+			console.log("mapView.jsp - message: " + message);
 
 			var mymap = L.map('mapid').setView([ lat, lon ], 15); // 初期ズームレベルを調整
 			console.log("mapView.jsp - Map initialized with:", lat, lon);
@@ -64,7 +66,7 @@ html, body {
 			    attribution : '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 			}).addTo(mymap);
 
-			var popupContent = '<img src="' + imagePath + '" alt="投稿画像" style="width:100px; height:auto;"><br>投稿された場所'; // ポップアップに表示するHTML
+			var popupContent = '<img src="' + imagePath + '" alt="投稿画像" style="width:100px; height:auto;"><br>' + '投稿場所'; // ポップアップに表示するHTML
 			L.marker([ lat, lon ]).addTo(mymap).bindPopup(popupContent).openPopup();
 			</script>
 		</div>
